@@ -57,7 +57,7 @@ BEGIN
 	WHILE n <= 0 DO
             SELECT DATE_ADD(retDate, INTERVAL + 0 DAY) INTO retDate ;
 	    SELECT fCheckHoliday(retDate) INTO isHoliday ;
-            IF isHoliday IS FASLE THEN
+            IF isHoliday IS FALSE THEN
 	        SET n = 1 ;
                 RETURN retDate;
 
